@@ -1,11 +1,11 @@
 let container = document.createElement('div');
 container.classList.add('container');
-let innerdiv;
 
 for(let i=0; i<16; i++){
-    innerdiv = document.createElement('div');
-    innerdiv.classList.add(`box${i}`);
-    container.appendChild(innerdiv);
+    let childDiv = document.createElement('div');
+    childDiv.classList.add('box1');
+    container.appendChild(childDiv);
 }
 
 document.body.appendChild(container);
+console.log(container);
