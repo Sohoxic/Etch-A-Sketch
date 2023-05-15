@@ -8,4 +8,12 @@ for(let i=0; i<16; i++){
 }
 
 document.body.appendChild(container);
-console.log(container);
+
+for (let i = 0; i < container.children.length; i++) {
+    let box = container.children[i];
+    box.addEventListener('mouseover', function(e) {
+      e.target.style.backgroundColor = '#ACBCFF';
+    });
+  }
+  
+
