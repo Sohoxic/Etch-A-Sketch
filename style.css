@@ -16,22 +16,22 @@
 .btn{
     height: 70px;
     width: 400px;
-    margin-left:35% ;margin-right:35% ;
+    margin-left:35% ; margin-right:35% ; margin-bottom: 4px;
     font-size: large;
     font-weight: bold;
 }
 
 .clearBtn,.eraseBtn{
     height: 50px;
-    width: 198px;
+    width: 196px;
     font-weight: bold;
 }
 
 .containerForButton{
     margin-left: 35%;
-    margin-top: 4px;;
+    margin-top: 4px;
     display: flex;
-    gap: 4px;
+    gap: 8px;
 }
 
 
