@@ -5,7 +5,8 @@ let button = document.createElement('button');
 button.classList.add('btn');
 button.textContent = "Click to enter No. of grid boxes you want for the sketchpad";
 
-
+let containerForButton = document.createElement('div');
+containerForButton.classList.add('containerForButton');
 let clearBtn = document.createElement('button');
 clearBtn.classList.add('clearBtn');
 clearBtn.textContent = "Clear sketchpad";
@@ -60,9 +61,9 @@ clearBtn.addEventListener('click',()=>{
 });
 
 document.body.append(button);
-document.body.append(clearBtn);
-document.body.append(eraseBtn);
+containerForButton.append(clearBtn, eraseBtn);
 document.body.appendChild(container);
+document.body.appendChild(containerForButton);
 
 
   
