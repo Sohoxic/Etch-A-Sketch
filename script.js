@@ -5,6 +5,16 @@ let button = document.createElement('button');
 button.classList.add('btn');
 button.textContent = "Click to enter No. of grid boxes you want for the sketchpad";
 
+
+let clearBtn = document.createElement('button');
+clearBtn.classList.add('clearBtn');
+clearBtn.textContent = "Clear sketchpad";
+// clearBtn.style['margin'] = "10px";
+
+let eraseBtn = document.createElement('button');
+eraseBtn.classList.add('clearBtn');
+eraseBtn.textContent = "ERASE sketchpad";
+
 let n;
 
 function createBox() {
@@ -33,9 +43,25 @@ button.addEventListener('click',() => {
 
 // console.log(noOfBox);
 
+eraseBtn.addEventListener('click',()=>{
+  for (let i = 0; i < container.children.length; i++) {
+    let box = container.children[i];
+    box.addEventListener('mouseover', function(e) {
+      e.target.style.backgroundColor = '#FFFAF4';
+    });
+  }
+});
 
+clearBtn.addEventListener('click',()=>{
+  for (let i = 0; i < container.children.length; i++) {
+    let box = container.children[i];
+      box.style['background-color'] = '#FFFAF4';
+  }
+});
 
 document.body.append(button);
+document.body.append(clearBtn);
+document.body.append(eraseBtn);
 document.body.appendChild(container);
 
 

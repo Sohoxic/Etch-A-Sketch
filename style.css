@@ -14,9 +14,21 @@
     /* margin:10px; */
 }
 .btn{
-    height: 100px;
+    height: 70px;
     width: 400px;
-    margin-left:35% ;
-    
+    margin-left:35% ;margin-right:35% ;
+    font-size: large;
+    font-weight: bold;
 }
+
+.clearBtn{
+    height: 50px;
+    width: 200px;
+    /* margin-top: 5px;
+    margin-left: 35%; */
+    /* margin-left: 35%; */ 
+    font-weight: bold;
+}
+
+
 
