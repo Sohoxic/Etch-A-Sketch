@@ -7,8 +7,24 @@ button.textContent = "Click to enter No. of grid boxes you want for the sketchpa
 
 let n;
 
+function createBox() {
+  for(let i=0; i<n; i++){
+    let childDiv = document.createElement('div');
+    childDiv.classList.add('box1');
+    container.appendChild(childDiv);
+  }
+  for (let i = 0; i < container.children.length; i++) {
+    let box = container.children[i];
+    box.addEventListener('mouseover', function(e) {
+      e.target.style.backgroundColor = '#D25380';
+    });
+  }
+
+}
+
 function noOfBox(n){
   noOfBox = n;
+  createBox();
 }
 button.addEventListener('click',() => {
   n = prompt('Enter the grid size for the Sketchpad!');
@@ -17,20 +33,11 @@ button.addEventListener('click',() => {
 
 // console.log(noOfBox);
 
-for(let i=0; i<100000; i++){
-    let childDiv = document.createElement('div');
-    childDiv.classList.add('box1');
-    container.appendChild(childDiv);
-}
+
 
 document.body.append(button);
 document.body.appendChild(container);
 
-for (let i = 0; i < container.children.length; i++) {
-    let box = container.children[i];
-    box.addEventListener('mouseover', function(e) {
-      e.target.style.backgroundColor = '#D25380';
-    });
-  }
 
   
+
