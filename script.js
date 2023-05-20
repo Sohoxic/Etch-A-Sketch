@@ -16,6 +16,10 @@ let eraseBtn = document.createElement('button');
 eraseBtn.classList.add('clearBtn');
 eraseBtn.textContent = "ERASE sketchpad";
 
+let recolor = document.createElement('button');
+recolor.classList.add('recolor');
+recolor.textContent = "Recolour";
+
 let n;
 
 function createBox() {
@@ -60,8 +64,18 @@ clearBtn.addEventListener('click',()=>{
   }
 });
 
+
+recolor.addEventListener('click',()=>{
+  for (let i = 0; i < container.children.length; i++) {
+    let box = container.children[i];
+    box.addEventListener('mouseover', function(e) {
+      e.target.style.backgroundColor = '#D25380';
+    });
+  }
+});
+
 document.body.append(button);
-containerForButton.append(clearBtn, eraseBtn);
+containerForButton.append(clearBtn, eraseBtn,recolor);
 document.body.appendChild(container);
 document.body.appendChild(containerForButton);
 

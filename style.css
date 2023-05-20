@@ -21,9 +21,9 @@
     font-weight: bold;
 }
 
-.clearBtn,.eraseBtn{
+.clearBtn,.eraseBtn,.recolor{
     height: 50px;
-    width: 196px;
+    width: 129px;
     font-weight: bold;
 }
 
@@ -31,7 +31,7 @@
     margin-left: 35%;
     margin-top: 4px;
     display: flex;
-    gap: 8px;
+    gap: 7px;
 }
 
 
