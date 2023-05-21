@@ -20,8 +20,19 @@ let recolor = document.createElement('button');
 recolor.classList.add('recolor');
 recolor.textContent = "Recolour";
 
+let removeChildDivs = document.createElement('button');
+removeChildDivs.classList.add('removeChildDivs');
+removeChildDivs.textContent = "Destroy Sketchpad and Create a new one!";
+
 let n;
 
+function removeChild(){
+  for (let i = 0; i < container.children.length; i++) {
+    let box = container.children[i];
+    container.removeChild(box);
+  }
+}
+  
 function createBox() {
   for(let i=0; i<n; i++){
     let childDiv = document.createElement('div');
@@ -74,11 +85,10 @@ recolor.addEventListener('click',()=>{
   }
 });
 
+removeChildDivs.addEventListener('click',removeChild);
+
 document.body.append(button);
 containerForButton.append(clearBtn, eraseBtn,recolor);
 document.body.appendChild(container);
 document.body.appendChild(containerForButton);
-
-
-  
-
+document.body.appendChild(removeChildDivs);

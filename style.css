@@ -13,7 +13,7 @@
     
     /* margin:10px; */
 }
-.btn{
+.btn,.removeChildDivs{
     height: 70px;
     width: 400px;
     margin-left:35% ; margin-right:35% ; margin-bottom: 4px;
@@ -34,5 +34,7 @@
     gap: 7px;
 }
 
-
+.removeChildDivs{
+    margin-top: 8px;
+}
 
